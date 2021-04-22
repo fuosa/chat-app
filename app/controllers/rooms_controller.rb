@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      reditect_to root_path
+      redirect_to root_path
     else
       render :new
     end
@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
 
   def index
   end
-  
+
   private
 
   def room_params
